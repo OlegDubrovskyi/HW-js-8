@@ -19,10 +19,14 @@ function calculateDate(inputDate) {
 	if (userDate < currentDate ) {
 		x = (currentDate - userDate)/ 3600000;
 		console = "Прошло " + x + " часов";
-	} else if (userDate > currentDate) {
+	}
+
+	if (userDate > currentDate) {
 		x = (userDate - currentDate)/ 3600000;
 		console = "Осталось " + x + " часов";
-	} else if (Math.abs(userDate - currentDate) <= 7200000) {
+	}
+	
+	if (Math.abs(userDate - currentDate) <= 7200000) {
 		console = "Cейчас";
 	}
 	return console;
